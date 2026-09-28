@@ -100,7 +100,7 @@ services:
       - EXECUTOR=Local
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW_CONN_DESTINATION_POSTGRES=postgres://postgres:secret@destination_postgres:5434/destination_db
-      - AIRFLOW__CORE__FERNET_KEY=sZzR240WkLVBGyK1PlcBlfIERbgT4RKN2C3bG8dTL0M=
+      - AIRFLOW__CORE__FERNET_KEY=your-fernet-key
       - AIRFLOW__API_AUTH__JWT_SECRET=my-super-secret-jwt-key-1234567890
       - AIRFLOW__API__SECRET_KEY=secret
     ports:
@@ -130,7 +130,7 @@ services:
       - EXECUTOR=Local
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW_CONN_DESTINATION_POSTGRES=postgres://postgres:secret@destination_postgres:5434/destination_db
-      - AIRFLOW__CORE__FERNET_KEY=sZzR240WkLVBGyK1PlcBlfIERbgT4RKN2C3bG8dTL0M=
+      - AIRFLOW__CORE__FERNET_KEY=your-fernet-key
       - AIRFLOW__API_AUTH__JWT_SECRET=my-super-secret-jwt-key-1234567890
       - AIRFLOW__API__SECRET_KEY=secret
       - AIRFLOW__CORE__EXECUTION_API_SERVER_URL=http://api-server:8080/execution/
@@ -154,7 +154,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
-      - AIRFLOW__CORE__FERNET_KEY=sZzR240WkLVBGyK1PlcBlfIERbgT4RKN2C3bG8dTL0M=
+      - AIRFLOW__CORE__FERNET_KEY=your-fernet-key
       - AIRFLOW__API_AUTH__JWT_SECRET=my-super-secret-jwt-key-1234567890
       - AIRFLOW__API__SECRET_KEY=secret
     command: dag-processor
